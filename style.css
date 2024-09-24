@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    width: 100vw;
+  }
+  
+  #rain {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .link {
+    position: absolute;
+    color: green;
+    font-size: 50px;
+    text-decoration: none;
+    opacity: 0;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    transition: opacity 0.5s ease-in-out;
+    left: calc(var(--link-spacing) * var(--link-index));
+    top: calc(var(--link-spacing) * var(--link-index) * -1);
+  }
+  
+  @keyframes rain {
+    0% {
+      top: -20px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
+  
+  .link:nth-child(1) {
+    animation: rain 3s linear infinite;
+    left: 100px;
+  }
+  .link:nth-child(2) {
+    animation: rain 2.5s linear infinite;
+    left: 300px;
+  }
+  .link:nth-child(3) {
+    animation: rain 4s linear infinite;
+    left: 500px;
+  }
+  .link:nth-child(4) {
+    animation: rain 3.5s linear infinite;
+    left: 700px;
+  }
+  .link:nth-child(5){
+    animation: rain 3.5s linear infinite;
+    right: 100px;
+  }
+  .link:nth-child(6){
+    animation: rain 3s linear infinite;
+    right: 300px;
+  }
+  .link:nth-child(7){
+    animation: rain 2.5s linear infinite;
+    right: 500px;
+  }
+  .link:nth-child(8){
+    animation: rain 2s linear infinite;
+    right: 700px;
+  }
+  .link:nth-child(9){
+    animation: rain 3s linear infinite;
+    right: 900px;
+  }
+  .link:nth-child(10){
+    animation: rain 2.5s linear infinite;
+    right: 1100px;
+  }
+  .link:nth-child(11){
+    animation: rain 2s linear infinite;
+    right: 1300px;
+  }
+  .link:nth-child(12){
+    animation: rain 3s linear infinite;
+    right: 1500px;
+  }
+  
